@@ -1494,12 +1494,13 @@ body {
   }
 
   .main-nav__list > li {
-    margin: 0 0 35px 0;
+    margin: 0 0 30px 0;
   }
 
   .main-nav__link {
     color: #4c4c4c;
     font-size: 32px;
+    line-height: 45px;
   }
 
   .social-header__link::before {

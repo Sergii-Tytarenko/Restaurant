@@ -13,7 +13,6 @@ testWebP(function (support) {
 	}
 });
 
-
 // Header Scroll 
 let header = $('.header'),
 	scrollPrev = 0;
@@ -21,7 +20,7 @@ let header = $('.header'),
 $(window).scroll(function() {
 	var scrolled = $(window).scrollTop();
  
-	if ( scrolled > 100 && scrolled > scrollPrev ) {
+	if ( scrolled > 10 && scrolled > scrollPrev ) {
 		header.addClass('_scroll');
 	} else {
 		header.removeClass('_scroll');

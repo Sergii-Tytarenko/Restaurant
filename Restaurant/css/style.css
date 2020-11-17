@@ -632,7 +632,6 @@ body {
 
 .menu {
   position: relative;
-  z-index: 1;
   padding: 100px 0 80px;
   padding-top: 100px;
   padding-bottom: 80px;
@@ -647,7 +646,7 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   max-width: 1600px;
   height: 100%;
@@ -660,6 +659,8 @@ body {
 }
 
 .menu__container {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,26 +818,27 @@ body {
 }
 
 ._no-webp .reservations::after {
-  background-image: url("../img/reservations/res_bgi1.svg"), url("../img/reservations/Layer 12.png"); }
+  background-image: url("../img/reservations/res-bg1.svg"), url("../img/reservations/res-bg2.png"); }
 
 .reservations::after {
   content: '';
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: -1;
-  width: 100%;
-  max-width: 1600px;
+  z-index: 0;
+  width: 1600px;
   height: 100%;
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  background-size: auto;
+  background-size: 180px 488px, auto;
   background-repeat: no-repeat;
-  background-position: left top, top 270px right 90px;
+  background-position: left, top 270px right 90px;
 }
 
 .reservations__container {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,7 +916,7 @@ body {
   display: block;
   color: #fb5231;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 500;
 }
 
@@ -926,11 +928,13 @@ body {
   line-height: 36px;
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid #c8c6c6;
+  overflow: hidden;
 }
 
 .form__input::-webkit-input-placeholder {
   color: #a4a4a4;
   font-size: 12px;
+  line-height: 1.5;
   -webkit-transition: all .8s;
   transition: all .8s;
 }
@@ -938,6 +942,7 @@ body {
 .form__input::-moz-placeholder {
   color: #a4a4a4;
   font-size: 12px;
+  line-height: 1.5;
   -moz-transition: all .8s;
   transition: all .8s;
 }
@@ -945,6 +950,7 @@ body {
 .form__input:-ms-input-placeholder {
   color: #a4a4a4;
   font-size: 12px;
+  line-height: 1.5;
   -ms-transition: all .8s;
   transition: all .8s;
 }
@@ -952,6 +958,7 @@ body {
 .form__input::-ms-input-placeholder {
   color: #a4a4a4;
   font-size: 12px;
+  line-height: 1.5;
   -ms-transition: all .8s;
   transition: all .8s;
 }
@@ -959,6 +966,7 @@ body {
 .form__input::placeholder {
   color: #a4a4a4;
   font-size: 12px;
+  line-height: 1.5;
   -webkit-transition: all .8s;
   -o-transition: all .8s;
   transition: all .8s;
@@ -998,6 +1006,194 @@ body {
   border: 1px solid #fb5231;
 }
 
+/* Main Footer
+===================== ===================== */
+
+._no-webp .main-footer {
+  background: #1a1f3b url("../img/menu/menu-bg.png") top left repeat; }
+
+.main-footer {
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.main-footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 60px 0 10px;
+  padding-top: 60px;
+}
+
+.main-footer__bottom {
+  padding: 0 0 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background: #1a1f3b;
+}
+
+.main-footer__row {
+  padding: 0 30px 0 0;
+}
+
+.body-footer__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  padding: 0 30px 0 0;
+  text-align: center;
+}
+
+.body-footer__column:last-child {
+  padding: 0 0 0 75px;
+  text-align: left;
+}
+
+.body-footer__column--center {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 0 30px 0;
+}
+
+.body-footer__logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.call {
+  display: inline-block;
+}
+
+.call span {
+  display: block;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.call__icon {
+  font-size: 0;
+  color: transparent;
+}
+
+.call__icon::before {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+
+.call__icon:hover:before,
+.call__icon:focus:before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.call__phone {
+  display: block;
+  color: #969595;
+}
+
+.address {
+  display: inline-block;
+}
+
+.address span {
+  display: block;
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
+.address__icon {
+  font-size: 0;
+  color: transparent;
+}
+
+.address__icon::before {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+
+.address__icon:hover:before,
+.address__icon:focus:before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.address__text {
+  color: #969595;
+}
+
+.social-footer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 33.333%;
+  margin: 0 0 10px 0;
+}
+
+.social-footer li {
+  margin: 0 10px 15px 0;
+}
+
+.social-footer li:last-child {
+  margin: 0;
+}
+
+.social-footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #1a1e36;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.social-footer__link:hover,
+.social-footer__link:focus {
+  background-color: #fb5535;
+}
+
+.social-footer__link:hover > .social-footer__icon:before,
+.social-footer__link:focus > .social-footer__icon:before {
+  color: #423838;
+}
+
+.social-footer__icon {
+  font-size: 0;
+  color: transparent;
+}
+
+.social-footer__icon::before {
+  display: block;
+  font-size: 14px;
+  color: #6b6b6b;
+  -webkit-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+
 @media (min-width: 1200px) {
   .list-menu__name::after {
     -webkit-transform: translate(4px, -10px);
@@ -1023,6 +1219,12 @@ body {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media (max-width: 1360px) {
+  .reservations::after {
+    display: none;
   }
 }
 
@@ -1125,6 +1327,14 @@ body {
   .reservations__text {
     margin: 0 0 55px 0;
   }
+
+  .main-footer__body {
+    padding-top: calc(40px + 20 * ((100vw - 320px) / 880));
+  }
+
+  .main-footer__bottom {
+    padding-bottom: calc(40px + 20 * ((100vw - 320px) / 880));
+  }
 }
 
 @media (max-width: 1150px) {
@@ -1202,6 +1412,24 @@ body {
 
   .reservations__photo {
     padding-bottom: 65%;
+  }
+
+  .main-footer__row {
+    padding: 0;
+  }
+
+  .body-footer__column {
+    padding: 0;
+    text-align: left;
+  }
+
+  .body-footer__column:last-child {
+    padding: 0;
+    text-align: right;
+  }
+
+  .body-footer__column--center {
+    padding: 0 20px;
   }
 }
 
@@ -1325,6 +1553,33 @@ body {
   .menu__column:first-child {
     margin: 0 0 50px 0;
   }
+
+  .main-footer__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .body-footer__column {
+    margin: 0 0 30px 0;
+  }
+
+  .body-footer__column--center {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
+  .social-footer {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1419,7 +1674,9 @@ body {
 
 ._webp .reservations { background: #e1e3e4 url(../img/reservations/res-bg.webp) center/cover no-repeat; }
 
-._webp .reservations::after { background-image: url(../img/reservations/res_bgi1.svg), url("../img/reservations/Layer 12.png"); }
+._webp .reservations::after { background-image: url(../img/reservations/res-bg1.svg), url(../img/reservations/res-bg2.webp); }
+
+._webp .main-footer { background: #1a1f3b url(../img/menu/menu-bg.webp) top left repeat; }
 
 @media (max-width: 767px) {
 

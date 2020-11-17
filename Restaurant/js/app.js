@@ -13,6 +13,35 @@ testWebP(function (support) {
 	}
 });
 
+
+//Smoth scroll header links
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+//Smoth scroll header links
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
 // Header Scroll 
 let header = $('.header'),
 	scrollPrev = 0;
@@ -26,7 +55,9 @@ $(window).scroll(function() {
 		header.removeClass('_scroll');
 	}
 	scrollPrev = scrolled;
-});;
+});
+
+;
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
 // e.x. data-da="item,767,last,max"

@@ -75,7 +75,7 @@ html,body {
 		width: 100%;
 		height: 100%;
 
-		background: #1b203c url('../img/promo/header-bg.png') center / cover no-repeat;
+		background:#383838;
 		@media (max-width: 767px) {
 			display: block;
 		}
@@ -83,6 +83,9 @@ html,body {
 	@media (max-width: 767px) {
 		position: fixed;
 		padding: 5px 0;
+	}
+	&._scroll {
+		top: -100px;
 	}
 	// .header__container
 	&__container {
@@ -127,7 +130,7 @@ html,body {
 				height: auto;
 			}
 			@media (max-width: 420px) {
-				width: 108px;
+				width: 98px;
 				height: auto;
 			}
 		}
@@ -190,7 +193,7 @@ html,body {
 			padding: 160px 0 50px;
 		}
 		@media (max-width: 420px) {
-			padding-top: 110px;
+			padding-top: 100px;
 		}
 		li {
 			margin: 10px 0 10px 40px;
@@ -202,6 +205,7 @@ html,body {
 		& > li {
 			@media (max-width: 767px) {
 				margin: 0 0 30px 0;
+				line-height: 45px;
 			}
 		}
 	}
@@ -217,7 +221,6 @@ html,body {
 		@media (max-width: 767px) {
 			color: #4c4c4c;
 			font-size: 32px;
-			line-height: 45px;
 		}
 		&:hover,
 		&:focus {
@@ -346,6 +349,9 @@ html,body {
 		@media (max-width: 767px) {
 			padding-top: 100px;
 		}
+		@media (max-width: 420px) {
+			padding-top: 56px;
+		}
 	}
 	// .promo__inner
 	&__inner {
@@ -384,7 +390,7 @@ html,body {
 
 		font-family: 'Marck Script', cursive;
 		font-size: 90px;
-		@include adaptiv-font(90, 50, 90);
+		@include adaptiv-font(90, 48, 90);
 		line-height: (130px / 90px) * 100%;
 	}
 	// .promo__decor

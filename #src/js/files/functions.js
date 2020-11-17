@@ -12,3 +12,19 @@ testWebP(function (support) {
 		document.querySelector('body').classList.add('_no-webp');
 	}
 });
+
+
+// Header Scroll 
+let header = $('.header'),
+	scrollPrev = 0;
+
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		header.addClass('_scroll');
+	} else {
+		header.removeClass('_scroll');
+	}
+	scrollPrev = scrolled;
+});

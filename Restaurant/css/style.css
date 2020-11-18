@@ -1423,8 +1423,8 @@ body.lock {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
 }
 
 .form__input--date::-moz-placeholder {
@@ -1432,7 +1432,7 @@ body.lock {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  transform: translate(0, -3px);
+  transform: translate(0, -2px);
 }
 
 .form__input--date:-ms-input-placeholder {
@@ -1440,8 +1440,8 @@ body.lock {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  -ms-transform: translate(0, -3px);
-      transform: translate(0, -3px);
+  -ms-transform: translate(0, -2px);
+      transform: translate(0, -2px);
 }
 
 .form__input--date::-ms-input-placeholder {
@@ -1449,8 +1449,8 @@ body.lock {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  -ms-transform: translate(0, -3px);
-      transform: translate(0, -3px);
+  -ms-transform: translate(0, -2px);
+      transform: translate(0, -2px);
 }
 
 .form__input--date::placeholder {
@@ -1458,9 +1458,9 @@ body.lock {
   font-size: 14px;
   line-height: 25px;
   letter-spacing: 0.5px;
-  -webkit-transform: translate(0, -3px);
-      -ms-transform: translate(0, -3px);
-          transform: translate(0, -3px);
+  -webkit-transform: translate(0, -2px);
+      -ms-transform: translate(0, -2px);
+          transform: translate(0, -2px);
 }
 
 /* Main Footer

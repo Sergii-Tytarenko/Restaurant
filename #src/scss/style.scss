@@ -2,6 +2,7 @@
 @import "fonts";
 @import "reset";
 @import "form";
+@import "datepicker";
 
 /* Global
 ===================== =====================*/
@@ -929,7 +930,7 @@ body.lock{
 		padding: 0 15px;
 
 		font-family: 'Focus';
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 36px;
 
 		background-color: rgba(255,255,255,0.4);
@@ -953,10 +954,18 @@ body.lock{
 		// &--name {}
 		// .form__input--date
 		&--date {
+			font-size: 13px;
 			padding-right: 28px;
+			letter-spacing: 2.5px;
 			background-image: url('../img/reservations/icon-cal.png');
 			background-position: center right 12px;
 			background-repeat: no-repeat;
+			cursor: pointer;
+			&::placeholder {
+				font-size: 14px;
+				line-height: 36px;
+				letter-spacing: 0.5px;
+			}
 		}
 		// .form__input--email
 		// &--email {}

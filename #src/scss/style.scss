@@ -956,7 +956,6 @@ body.lock{
 		&--date {
 			font-family: monospace;
 			color: #6f6f6f;
-			font-size: 15px;
 			padding-right: 28px;
 			background-image: url('../img/reservations/icon-cal.png');
 			background-position: center right 12px;
@@ -965,8 +964,6 @@ body.lock{
 				font-family: 'Focus';
 				font-size: 14px;
 				line-height: 25px;
-				letter-spacing: 0.5px;
-				transform:translate(0, -2px);
 			}
 		}
 		// .form__input--email

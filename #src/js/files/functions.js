@@ -14,7 +14,7 @@ testWebP(function (support) {
 });
 
 
-//Smooth scroll header links
+//Smooth scroll for header links
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -28,7 +28,7 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-// Header Scroll 
+// Header show scroll 
 let header = $('.header'),
 	scrollPrev = 0;
 

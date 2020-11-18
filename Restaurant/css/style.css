@@ -1136,11 +1136,6 @@ body.lock {
   transition: color .4s;
 }
 
-.address__icon:hover:before,
-.address__icon:focus:before {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .address__text {
   color: #969595;
 }

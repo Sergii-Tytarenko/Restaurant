@@ -1088,10 +1088,10 @@ body.lock{
 			color:rgba(255, 255, 255, .9);
 			transition: color .4s;
 		}
-		&:hover:before,
-		&:focus:before {
-			color: rgba(255, 255, 255, .7);;
-		}
+		// &:hover:before,
+		// &:focus:before {
+		// 	color: rgba(255, 255, 255, .7);;
+		// }
 	}
 	// .address__text
 	&__text {

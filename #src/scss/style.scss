@@ -21,7 +21,7 @@ html,body {
 	background-color: #fff;
 }
 
-.body.lock {
+body.lock{
 	overflow: hidden;
 }
 
@@ -211,7 +211,6 @@ html,body {
 	// .main-nav__link
 	&__link {
 		color: #fff;
-		line-height: 1.2;
 
 		transition: color .3s;
 		@media (max-width: 1150px) {
@@ -220,6 +219,9 @@ html,body {
 		@media (max-width: 767px) {
 			color: #4c4c4c;
 			font-size: 29px;
+			display: table;
+			vertical-align: bottom;
+			line-height: 42px;
 		}
 		&:hover,
 		&:focus {

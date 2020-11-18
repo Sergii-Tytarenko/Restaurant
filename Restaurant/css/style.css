@@ -107,12 +107,15 @@ textarea {
 }
 
 .btn--submit {
+  display: table;
+  margin: 0 auto;
+  vertical-align: bottom;
   width: 200px;
   height: 36px;
+  color: #fff;
   font-family: "Focus";
   font-size: 16px;
-  line-height: 41px;
-  color: #fff;
+  line-height: 40px;
   background-color: rgba(251, 82, 49, 0.98);
 }
 
@@ -168,7 +171,7 @@ body {
   background-color: #fff;
 }
 
-.body.lock {
+body.lock {
   overflow: hidden;
 }
 
@@ -306,7 +309,6 @@ body {
 
 .main-nav__link {
   color: #fff;
-  line-height: 1.2;
   -webkit-transition: color .3s;
   -o-transition: color .3s;
   transition: color .3s;
@@ -1504,6 +1506,9 @@ body {
   .main-nav__link {
     color: #4c4c4c;
     font-size: 29px;
+    display: table;
+    vertical-align: bottom;
+    line-height: 42px;
   }
 
   .social-header__link::before {

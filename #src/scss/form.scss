@@ -21,13 +21,17 @@
 		background-color: rgba(251,82,49,0.7);
 	}
 	&--submit {
+		display: table;
+		margin: 0 auto;
+		vertical-align: bottom;
 		width: 200px;
 		height: 36px;
 
+		color: #fff;
 		font-family: "Focus";
 		font-size: 16px;
-		line-height: 41px;
-		color: #fff;
+		line-height: 40px;
+
 
 		background-color: rgba(251,82,49,0.98);
 		&:hover,

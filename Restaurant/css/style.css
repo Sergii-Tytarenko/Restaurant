@@ -115,7 +115,7 @@ textarea {
   color: #fff;
   font-family: "Focus";
   font-size: 16px;
-  line-height: 40px;
+  line-height: 43px;
   background-color: rgba(251, 82, 49, 0.98);
 }
 
@@ -1012,6 +1012,15 @@ body.lock {
   border: 1px solid #fb5231;
 }
 
+._no-webp .form__input--date {
+  background-image: url("../img/reservations/icon-cal.png"); }
+
+.form__input--date {
+  padding-right: 28px;
+  background-position: center right 12px;
+  background-repeat: no-repeat;
+}
+
 /* Main Footer
 ===================== ===================== */
 
@@ -1686,6 +1695,8 @@ body.lock {
 ._webp .reservations { background: #e1e3e4 url(../img/reservations/res-bg.webp) center/cover no-repeat; }
 
 ._webp .reservations::after { background-image: url(../img/reservations/res-bg1.svg), url(../img/reservations/res-bg2.webp); }
+
+._webp .form__input--date { background-image: url(../img/reservations/icon-cal.webp); }
 
 ._webp .main-footer { background: #1a1f3b url(../img/menu/menu-bg.webp) top left repeat; }
 

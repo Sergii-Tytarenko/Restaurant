@@ -1421,31 +1421,31 @@ body.lock {
 .form__input--date::-webkit-input-placeholder {
   font-family: 'Focus';
   font-size: 14px;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 .form__input--date::-moz-placeholder {
   font-family: 'Focus';
   font-size: 14px;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 .form__input--date:-ms-input-placeholder {
   font-family: 'Focus';
   font-size: 14px;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 .form__input--date::-ms-input-placeholder {
   font-family: 'Focus';
   font-size: 14px;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 .form__input--date::placeholder {
   font-family: 'Focus';
   font-size: 14px;
-  line-height: 25px;
+  line-height: 35px;
 }
 
 /* Main Footer

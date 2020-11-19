@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Focus";
-  src: url("../fonts/Focus-Italic") format("woff2"), url("../fonts/Focus-Italic.woff") format("woff");
+  src: url("../fonts/Focus-Italic.woff2") format("woff2"), url("../fonts/Focus-Italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Focus";
-  src: url("../fonts/Focus-Medium") format("woff2"), url("../fonts/Focus-Medium.woff") format("woff");
+  src: url("../fonts/Focus-Medium.woff2") format("woff2"), url("../fonts/Focus-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Focus";
-  src: url("../fonts/Focus-Regular") format("woff2"), url("../fonts/Focus-Regular.woff") format("woff");
+  src: url("../fonts/Focus-Regular.woff2") format("woff2"), url("../fonts/Focus-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Myriad";
-  src: url("../fonts/SQDRSS+MyriadPro-Regular") format("woff2"), url("../fonts/SQDRSS+MyriadPro-Regular.woff") format("woff");
+  src: url("../fonts/SQDRSSMyriadProRegular.woff2") format("woff2"), url("../fonts/SQDRSSMyriadProRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

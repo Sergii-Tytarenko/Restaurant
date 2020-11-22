@@ -601,6 +601,20 @@ body.lock {
      object-fit: cover;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Main Header 
 ===================== ===================== */
 
@@ -1318,9 +1332,11 @@ body.lock {
   width: 100%;
   height: 36px;
   padding: 0 15px;
-  font-family: 'Focus';
+  font-family: 'Open sans';
+  font-weight: 300;
   font-size: 14px;
   line-height: 36px;
+  font-style: oblique;
   background-color: rgba(255, 255, 255, 0.4);
   border: 1px solid #c8c6c6;
   border-radius: 0 !important;
@@ -1329,8 +1345,6 @@ body.lock {
 
 .form__input::-webkit-input-placeholder {
   color: #a4a4a4;
-  font-size: 13px;
-  line-height: 36px;
   -webkit-transition: opacity .5s, -webkit-transform .3s linear;
   transition: opacity .5s, -webkit-transform .3s linear;
   transition: transform .3s linear, opacity .5s;
@@ -1339,32 +1353,24 @@ body.lock {
 
 .form__input::-moz-placeholder {
   color: #a4a4a4;
-  font-size: 13px;
-  line-height: 36px;
   -moz-transition: transform .3s linear, opacity .5s;
   transition: transform .3s linear, opacity .5s;
 }
 
 .form__input:-ms-input-placeholder {
   color: #a4a4a4;
-  font-size: 13px;
-  line-height: 36px;
   -ms-transition: transform .3s linear, opacity .5s;
   transition: transform .3s linear, opacity .5s;
 }
 
 .form__input::-ms-input-placeholder {
   color: #a4a4a4;
-  font-size: 13px;
-  line-height: 36px;
   -ms-transition: transform .3s linear, opacity .5s;
   transition: transform .3s linear, opacity .5s;
 }
 
 .form__input::placeholder {
   color: #a4a4a4;
-  font-size: 13px;
-  line-height: 36px;
   -webkit-transition: opacity .5s, -webkit-transform .3s linear;
   transition: opacity .5s, -webkit-transform .3s linear;
   -o-transition: transform .3s linear, opacity .5s;
@@ -1403,49 +1409,16 @@ body.lock {
 }
 
 .form__input:focus {
-  border: 1px solid #fb5231;
+  border: 1px solid #999;
 }
 
 ._no-webp .form__input--date {
   background-image: url("../img/reservations/icon-cal.png"); }
 
 .form__input--date {
-  font-family: monospace;
-  color: #6f6f6f;
-  font-size: 15px;
   padding-right: 28px;
   background-position: center right 12px;
   background-repeat: no-repeat;
-}
-
-.form__input--date::-webkit-input-placeholder {
-  font-family: 'Focus';
-  font-size: 14px;
-  line-height: 36px;
-}
-
-.form__input--date::-moz-placeholder {
-  font-family: 'Focus';
-  font-size: 14px;
-  line-height: 36px;
-}
-
-.form__input--date:-ms-input-placeholder {
-  font-family: 'Focus';
-  font-size: 14px;
-  line-height: 36px;
-}
-
-.form__input--date::-ms-input-placeholder {
-  font-family: 'Focus';
-  font-size: 14px;
-  line-height: 36px;
-}
-
-.form__input--date::placeholder {
-  font-family: 'Focus';
-  font-size: 14px;
-  line-height: 36px;
 }
 
 /* Main Footer
@@ -1631,11 +1604,165 @@ body.lock {
   transition: color .4s;
 }
 
+/* Modal Book
+===================== */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 110;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100vh;
+  background-color: #f8f3f0;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
+}
+
+.modal__book {
+  display: none;
+  width: 350px;
+  padding: 15px 35px 20px;
+  padding-right: 35px;
+  padding-left: 35px;
+  -webkit-animation-name: show-book;
+          animation-name: show-book;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.modal__book .form__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70%;
+          flex: 0 1 70%;
+}
+
+.modal__book .form__row--top {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__book .form__column:first-child {
+  margin: 0;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 105;
+}
+
+/* mdal-close-button */
+
+.modal-close {
+  position: absolute;
+  top: -22px;
+  right: -22px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-close:before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 4px;
+  height: 22px;
+  background-color: #d0d0d0;
+}
+
+.modal-close:before {
+  left: 50%;
+  margin-left: -2px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal-close:after {
+  margin-right: -2px;
+  right: 50%;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal-show {
+  display: block;
+}
+
+/* Modal- map
+===================== */
+
+/* Animation popup */
+
+@-webkit-keyframes show-book {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  60% {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes show-book {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+
+  60% {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media (min-width: 1200px) {
   .list-menu__name::after {
     -webkit-transform: translate(4px, -10px);
         -ms-transform: translate(4px, -10px);
             transform: translate(4px, -10px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .modal__book {
+    width: 20vw;
   }
 }
 
@@ -1771,6 +1898,14 @@ body.lock {
 
   .main-footer__bottom {
     padding-bottom: calc(40px + 20 * ((100vw - 320px) / 880));
+  }
+
+  .modal__book {
+    padding-right: calc(20px + 15 * ((100vw - 320px) / 880));
+  }
+
+  .modal__book {
+    padding-left: calc(20px + 15 * ((100vw - 320px) / 880));
   }
 }
 
@@ -2036,6 +2171,12 @@ body.lock {
   }
 }
 
+@media (max-width: 440px) {
+  .modal__book {
+    width: 80vw;
+  }
+}
+
 @media (max-width: 420px) {
   .btn--submit {
     width: 90%;
@@ -2101,6 +2242,17 @@ body.lock {
 @media (max-width: 920px) and (min-width: 595px) {
   .reservations__column--right {
     padding: 0 30px 0;
+  }
+}
+
+@media (max-height: 517px) {
+  .modal__book {
+    overflow-y: scroll;
+  }
+
+  .modal-close {
+    top: 6px;
+    right: 6px;
   }
 }
 

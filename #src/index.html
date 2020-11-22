@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
 	<title>Restaurant</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
 						</div>
 	
 						<div class="promo__links">
-							<a class="promo__btn btn" href="#">Book a table</a>
+							<a class="promo__btn btn modal-link" href="#">Book a table</a>
 							<a class="promo__btn btn" href="tel:8000000000">Call now</a>
 						</div>
 					</div>
@@ -295,24 +295,24 @@
 								<div class="form__column">
 									<div class="form__group">
 										<label for="name">Name</label>
-										<input type="text" class="form__input form__input--name" placeholder="your name *" id="name" required>
+										<input type="text" class="form__input form__input--name" placeholder="Your name *" id="name" required>
 									</div>
 
 									<div class="form__group">
 										<label for="calendar">Date</label>
-										<input type="text" class="form__input form__input--date _date" placeholder="date *" id="calendar" required data-value="">
+										<input type="text" class="form__input form__input--date _date" placeholder="Date *" id="calendar" required data-value="">
 									</div>
 								</div>
 
 								<div class="form__column">
 									<div class="form__group">
 										<label for="mail">Email</label>
-										<input type="email" class="form__input form__input--email" placeholder="your email *" id="mail" required>
+										<input type="email" class="form__input form__input--email" placeholder="Your email *" id="mail" required>
 									</div>
 
 									<div class="form__group">
 										<label for="number">Party Number</label>
-										<input type="text" class="form__input form__input--number" placeholder="party number" id="number">
+										<input type="text" class="form__input form__input--number" placeholder="Party number" id="number">
 									</div>
 								</div>
 							</div>
@@ -326,6 +326,48 @@
 			</div> <!--/.reservations -->
 		</main>
 		@@include('_footer.html', {}) 
+		
+		<!-- Pop-Ups -->
+		<div class="modal modal__book">
+			<h2 class="modal-title title title--red">Booke a table</h2>
+	
+			<!-- Modal form -->
+			<form  class="reservations__form form" action="#" method="POST" name="reservations" autocomplete="off">
+				<div class="form__row form__row--top">
+					<div class="form__column">
+						<div class="form__group">
+							<label for="name-m">Name</label>
+							<input type="text" class="form__input form__input--name" placeholder="Your name *" id="name-m" required>
+						</div>
+
+						<div class="form__group">
+							<label for="calendar-m">Date</label>
+							<input type="text" class="form__input form__input--date _date" placeholder="Date *" id="calendar-m" required data-value="">
+						</div>
+					</div>
+
+					<div class="form__column">
+						<div class="form__group">
+							<label for="mail-m">Email</label>
+							<input type="email" class="form__input form__input--email" placeholder="Your email *" id="mail-m" required>
+						</div>
+
+						<div class="form__group">
+							<label for="number-m">Party Number</label>
+							<input type="text" class="form__input form__input--number" placeholder="Party number" id="number-m">
+						</div>
+					</div>
+				</div>
+
+				<div class="form__row form__row--bottom">
+					<button class="btn btn--submit" type="submit">Book now!</button>
+				</div>
+			</form>
+
+			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+		</div>
+		
+		<div class="modal-overlay"></div>
 	</div> <!-- /.wrapper -->
 	<script src="https://kit.fontawesome.com/0cc725b087.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

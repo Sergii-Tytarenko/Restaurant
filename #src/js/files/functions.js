@@ -15,7 +15,7 @@ testWebP(function (support) {
 
 
 //Smooth scroll for header links
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
+let smoothLinks = document.querySelectorAll('.main-nav__link');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
         e.preventDefault();
@@ -24,9 +24,10 @@ for (let smoothLink of smoothLinks) {
         document.querySelector(id).scrollIntoView({
             behavior: 'smooth',
             block: 'start'
-        });
-    });
-};
+        })
+    })
+}
+
 
 // Header show scroll 
 let header = $('.header'),
@@ -41,5 +42,27 @@ $(window).scroll(function() {
 		header.removeClass('_scroll');
 	}
 	scrollPrev = scrolled;
+});
+
+
+// Pop-Up
+let link = document.querySelector(".modal-link");
+let popup = document.querySelector(".modal__book");
+let close = popup.querySelector(".modal-close");
+let overlay = document.querySelector(".modal-overlay");
+let body = document.querySelector("body");
+
+link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+	overlay.classList.add("modal-show");
+	body.classList.add("lock");
+});
+
+close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+	overlay.classList.remove("modal-show");
+	body.classList.remove("lock");
 });
 

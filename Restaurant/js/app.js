@@ -50,20 +50,17 @@ let link = document.querySelector(".modal-link");
 let popup = document.querySelector(".modal__book");
 let close = popup.querySelector(".modal-close");
 let overlay = document.querySelector(".modal-overlay");
-let body = document.querySelector("body");
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
 	overlay.classList.add("modal-show");
-	body.classList.add("lock");
 });
 
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
 	overlay.classList.remove("modal-show");
-	body.classList.remove("lock");
 });
 
 ;

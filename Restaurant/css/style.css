@@ -1677,13 +1677,13 @@ body.lock {
 
 .modal-close {
   position: absolute;
-  top: 0;
-  right: -30px;
+  top: 6px;
+  right: 6px;
   z-index: 111;
   width: 22px;
   height: 22px;
+  padding: 3px;
   border: none;
-  border-radius: 50%;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -1732,11 +1732,6 @@ body.lock {
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   outline: 3px solid #fff;
-}
-
-.modal__map .modal-close {
-  top: 6px;
-  right: 6px;
 }
 
 .modal__map .modal-close:before,
@@ -2194,13 +2189,6 @@ body.lock {
 
   .social-footer {
     max-width: 100%;
-  }
-}
-
-@media (max-height: 522px), (max-width: 767px) {
-  .modal-close {
-    top: 6px;
-    right: 6px;
   }
 }
 

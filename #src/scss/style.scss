@@ -1249,23 +1249,19 @@ body.lock{
 /* mdal-close-button */
 .modal-close {
     position: absolute;
-    top: 0;
-	right: -30px;
+    top: 6px;
+	right: 6px;
 	z-index: 111;
 
     width: 22px;
-    height: 22px;
+	height: 22px;
+	padding: 3px;
 
     border: none;
-    border-radius: 50%;
     background-color: transparent;
 
     outline: none;
 	cursor: pointer;
-	@media(max-height: 522px), (max-width: 767px) {
-		top: 6px;
-		right: 6px;
-	}
 }
 
 .modal-close:before,
@@ -1306,8 +1302,6 @@ body.lock{
 	animation-timing-function: ease-in-out;
 	outline: 3px solid #fff;
 	& .modal-close {
-		top: 6px;
-		right: 6px;
 		&:before,
 		&::after {
 			background-color: #666;

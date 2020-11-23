@@ -1164,10 +1164,20 @@ body.lock {
 ===================== ===================== */
 
 .reviews {
+  position: relative;
   padding: 140px 0 160px;
   padding-top: 140px;
   padding-bottom: 140px;
   text-align: center;
+}
+
+.reviews__container {
+  max-width: 100%;
+  margin: 0;
+}
+
+.slide-reviews {
+  padding: 0 15px;
 }
 
 .slide-reviews__icon {
@@ -1210,6 +1220,24 @@ body.lock {
 
 .slide-reviews__stars {
   display: inline-block;
+}
+
+.swiper-pagination {
+  width: 100% !important;
+  bottom: 40px;
+  bottom: 40px;
+}
+
+.swiper-pagination span {
+  margin: 0 10px 0 0;
+}
+
+.swiper-pagination span:last-child {
+  margin: 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #515884;
 }
 
 /* Reservations
@@ -1608,6 +1636,9 @@ body.lock {
 /* Modal Book
 ===================== ===================== */
 
+._no-webp .modal {
+  background: #e1e3e4 url("../img/reservations/res-bg.png") center/cover no-repeat; }
+
 .modal {
   position: fixed;
   top: 50%;
@@ -1617,7 +1648,6 @@ body.lock {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-height: 100vh;
-  background-color: #f8f3f0;
   border-radius: 3px;
   -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
           box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
@@ -1720,15 +1750,15 @@ body.lock {
 
 .modal__map {
   display: none;
-  width: 500px;
+  width: 600px;
   height: 400px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-animation-name: show-book;
           animation-name: show-book;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   outline: 3px solid #fff;
@@ -1741,7 +1771,7 @@ body.lock {
 
 .modal__map iframe {
   display: block;
-  width: 500px;
+  width: 600px;
   height: 400px;
   border: none;
 }
@@ -1757,16 +1787,19 @@ body.lock {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
             transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
   }
 
   60% {
     -webkit-transform: translate(-50%, -50%) scale(1.2);
             transform: translate(-50%, -50%) scale(1.2);
+    opacity: .5;
   }
 
   100% {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
 }
 
@@ -1774,16 +1807,19 @@ body.lock {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
             transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
   }
 
   60% {
     -webkit-transform: translate(-50%, -50%) scale(1.2);
             transform: translate(-50%, -50%) scale(1.2);
+    opacity: .5;
   }
 
   100% {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
 }
 
@@ -1901,6 +1937,10 @@ body.lock {
 
   .reviews {
     padding-bottom: calc(50px + 90 * ((100vw - 320px) / 880));
+  }
+
+  .swiper-pagination {
+    bottom: calc(5px + 35 * ((100vw - 320px) / 880));
   }
 
   .reservations {
@@ -2204,6 +2244,10 @@ body.lock {
   .menu__column {
     padding: 0;
   }
+
+  .slide-reviews__icon {
+    display: none;
+  }
 }
 
 @media (max-width: 499px), (max-height: 399px) {
@@ -2222,12 +2266,6 @@ body.lock {
   .modal__book {
     width: 90vw;
     padding: 20px 10px 10px;
-  }
-}
-
-@media (max-width: 425px) {
-  .slide-reviews__icon {
-    max-width: 200px;
   }
 }
 
@@ -2326,6 +2364,8 @@ body.lock {
 ._webp .form__input--date { background-image: url(../img/reservations/icon-cal.webp); }
 
 ._webp .main-footer { background: #1a1f3b url(../img/menu/menu-bg.webp) top left repeat; }
+
+._webp .modal { background: #e1e3e4 url(../img/reservations/res-bg.webp) center/cover no-repeat; }
 
 @media (max-width: 767px) {
 

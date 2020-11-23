@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Restaurant</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
-	<title>Restaurant</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
+	<meta name="description" content="The right ingredients for the right food">
+	<meta name="keywords" content="Food, restaurant">
 	<meta name="Author" content="SMT">
 </head>
 <body>
@@ -246,10 +247,42 @@
 
 			<!-- Reviews -->
 			<div class="reviews" id="reviews">
-				<div class="reviews__container _container">
+				<div class="reviews__container _container swiper-container">
 
-					<div class="reviews__slider">
-						<div class="reviews__slide slide-reviews">
+					<div class="reviews__slider swiper-wrapper">
+						<div class="reviews__slide slide-reviews swiper-slide">
+							<div class="slide-reviews__icon">
+								<img src="img/reviews/reviews_icon.png" alt="Icon">
+							</div>
+
+							<h2 class="slide-reviews__title title title--red">Guest Reviews</h2>
+							<div class="slide-reviews__inner">
+								<p class="slide-reviews__text">The food was excellent and the service was the best we’ve experienced in Venice so far. We’ll definitely come back to try out more of the dishes!</p>
+
+								<p class="slide-reviews__athor">Jhon&nbsp;Hasegools - SoooP&nbsp;Inc.</p>
+								<span class="slide-reviews__stars">
+									<img src="img/reviews/rev_stars.png" alt="Stars">
+								</span>
+							</div>
+						</div>
+
+						<div class="reviews__slide slide-reviews swiper-slide">
+							<div class="slide-reviews__icon">
+								<img src="img/reviews/reviews_icon.png" alt="Icon">
+							</div>
+
+							<h2 class="slide-reviews__title title title--red">Guest Reviews</h2>
+							<div class="slide-reviews__inner">
+								<p class="slide-reviews__text">The food was excellent and the service was the best we’ve experienced in Venice so far. We’ll definitely come back to try out more of the dishes!</p>
+
+								<p class="slide-reviews__athor">Jhon&nbsp;Hasegools - SoooP&nbsp;Inc.</p>
+								<span class="slide-reviews__stars">
+									<img src="img/reviews/rev_stars.png" alt="Stars">
+								</span>
+							</div>
+						</div>
+
+						<div class="reviews__slide slide-reviews swiper-slide">
 							<div class="slide-reviews__icon">
 								<img src="img/reviews/reviews_icon.png" alt="Icon">
 							</div>
@@ -266,6 +299,8 @@
 						</div>
 					</div> <!-- /.reviews__slider -->
 				</div> <!--/.reviews__container -->
+
+				<div class="swiper-pagination"></div>
 			</div> <!--/.reviews--> 
 
 			<!-- Reservations -->
@@ -372,11 +407,11 @@
 
 			<div class="modal-close"></div>
 		</div>
-		
 		<div class="modal-overlay"></div>
 	</div> <!-- /.wrapper -->
 	<script src="https://kit.fontawesome.com/0cc725b087.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/vendors.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>

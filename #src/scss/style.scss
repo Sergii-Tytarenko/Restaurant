@@ -497,7 +497,6 @@ body.lock{
 
 
 
-
 /* Ingredients
 ===================== ===================== */
 .ingredients {
@@ -739,69 +738,21 @@ body.lock{
 /* Reviews
 ===================== ===================== */
 .reviews {
+	position: relative;
+
 	padding: 140px 0 160px;
 	@include adaptiv-value ("padding-top", 140, 40, 1);
 	@include adaptiv-value ("padding-bottom", 140, 50, 1);
 
 	text-align: center;
-	// .reviews__container
-	// &__container {}
-	// .reviews__slider
-	// &__slider {}
-	// .reviews__slide
-	// &__slide {}
-}
-
-.slide-reviews {
-	// .slide-reviews__icon
-	&__icon {
-		max-width: 350px;
-		margin: 0 auto 30px;
-		img {
-			display: block;
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		@media(max-width: 425px) {
-			max-width: 200px;
-		}
-	}
-	// .slide-reviews__title
-	&__title {
-		margin-bottom: 35px;
-		color: #333;
-	}
-	// .slide-reviews__inner
-	&__inner {
-		max-width: 940px;
-		margin: 0 auto;
-
-		color: #1a1f3b;
-	}
-	// .slide-reviews__text
-	&__text {
-		margin: 0 0 45px 0;
-
-		font-size: 25px;
-		line-height: 45px / 25px * 100%;
-		@include adaptiv-font(25, 18, 25);
-	}
-	// .slide-reviews__athor
-	&__athor {
-		margin: 0 0 20px 0;
-
-		font-family: 'Marck Script', cursive;
-		font-size: 41px;
-		line-height: 45px;
-		font-weight: 400;
-		@include adaptiv-font(41, 35, 41);
-
-	}
-	// .slide-reviews__stars
-	&__stars {
-		display: inline-block;
+	&__container {
+		max-width: 100%;
+		margin: 0;
 	}
 }
+@import "slider";
+
+
 
 /* Reservations
 ===================== ===================== */
@@ -1176,7 +1127,6 @@ body.lock{
 
 
 
-
 /* Modal Book
 ===================== ===================== */
 .modal {
@@ -1187,7 +1137,7 @@ body.lock{
 	transform: translate(-50%, -50%);
 	max-height: 100vh;
     
-	background-color: #f8f3f0;
+	background: #e1e3e4 url('../img/reservations/res-bg.png') center / cover no-repeat;
 	border-radius: 3px;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, .75); 
 }
@@ -1291,17 +1241,18 @@ body.lock{
 }
 
 
+
 /* Modal- map
 ===================== ===================== */
 .modal__map {
     display: none;
-    width: 500px;
+    width: 600px;
     height: 400px;
 
     transform: translate(-50%, -50%);
 
     animation-name: show-book;
-    animation-duration: .8s;
+    animation-duration: .5s;
 	animation-timing-function: ease-in-out;
 	outline: 3px solid #fff;
 	& .modal-close {
@@ -1318,7 +1269,7 @@ body.lock{
 
 .modal__map iframe {
 	display: block;
-	width: 500px;
+	width: 600px;
 	height: 400px;
 	border: none;
 	@media(max-width: 499px), (max-height: 399px) {
@@ -1332,19 +1283,23 @@ body.lock{
 }
 
 
+
 /* Animation popup
 =====================  =====================  */
 @keyframes show-book {
     0% {
-        transform: translate(-50%, -50%) scale(0);
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
     }
 
     60% {
-        transform: translate(-50%, -50%) scale(1.2);
+		transform: translate(-50%, -50%) scale(1.2);
+		opacity: .5;
     }
     
     100% {
-        transform: translate(-50%, -50%) scale(1);
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
     }
 
 }

@@ -1165,8 +1165,8 @@ body.lock {
 
 .reviews {
   position: relative;
-  padding: 140px 0 160px;
-  padding-top: 140px;
+  padding: 100px 0 140px;
+  padding-top: 100px;
   padding-bottom: 140px;
   text-align: center;
 }
@@ -1932,11 +1932,11 @@ body.lock {
   }
 
   .reviews {
-    padding-top: calc(40px + 100 * ((100vw - 320px) / 880));
+    padding-top: calc(40px + 60 * ((100vw - 320px) / 880));
   }
 
   .reviews {
-    padding-bottom: calc(50px + 90 * ((100vw - 320px) / 880));
+    padding-bottom: calc(55px + 85 * ((100vw - 320px) / 880));
   }
 
   .swiper-pagination {

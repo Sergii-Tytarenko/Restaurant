@@ -740,9 +740,9 @@ body.lock{
 .reviews {
 	position: relative;
 
-	padding: 140px 0 160px;
-	@include adaptiv-value ("padding-top", 140, 40, 1);
-	@include adaptiv-value ("padding-bottom", 140, 50, 1);
+	padding: 100px 0 140px;
+	@include adaptiv-value ("padding-top", 100, 40, 1);
+	@include adaptiv-value ("padding-bottom", 140, 55, 1);
 
 	text-align: center;
 	&__container {

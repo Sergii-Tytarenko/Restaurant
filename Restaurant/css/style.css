@@ -2225,6 +2225,12 @@ body.lock {
   }
 }
 
+@media (max-width: 425px) {
+  .slide-reviews__icon {
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 420px) {
   .btn--submit {
     width: 90%;

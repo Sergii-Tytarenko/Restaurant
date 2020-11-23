@@ -73,14 +73,22 @@ mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-show");
     overlay.classList.add("modal-show");
-
 });
 
 mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.remove("modal-show");
     overlay.classList.remove("modal-show");
-});;
+});
+
+
+overlay.addEventListener("click", function(e) {
+	if (!e.target.classList.contains("modal")) {
+		popup.classList.remove("modal-show");
+		mapPopup.classList.remove("modal-show");
+		overlay.classList.remove("modal-show");
+	}
+});
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
 // e.x. data-da="item,767,last,max"

@@ -45,7 +45,7 @@ $(window).scroll(function() {
 });
 
 
-// Pop-Up
+// Popup-Book
 let link = document.querySelector(".modal-link");
 let popup = document.querySelector(".modal__book");
 let close = popup.querySelector(".modal-close");
@@ -63,7 +63,24 @@ close.addEventListener("click", function (evt) {
 	overlay.classList.remove("modal-show");
 });
 
-;
+
+//Popup-Map
+let mapLink = document.querySelector(".address");
+let mapPopup = document.querySelector(".modal__map");
+let mapClose = mapPopup.querySelector(".modal-close");
+
+mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+    overlay.classList.add("modal-show");
+
+});
+
+mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+    overlay.classList.remove("modal-show");
+});;
 // Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi),type (min, max)"
 // e.x. data-da="item,767,last,max"

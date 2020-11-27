@@ -625,6 +625,9 @@ body.lock {
   z-index: 100;
   width: 100%;
   padding-top: 20px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .header::after {

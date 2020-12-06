@@ -40,14 +40,14 @@ let path = {
 		html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
 		js: [src_folder + "/js/app.js", src_folder + "/js/vendors.js"],
 		css: src_folder + "/scss/style.scss",
-		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
+		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest}", "!**/favicon.*"],
 		fonts: src_folder + "/fonts/*.ttf"
 	},
 	watch: {
 		html: src_folder + "/**/*.html",
 		js: src_folder + "/**/*.js",
 		css: src_folder + "/scss/**/*.scss",
-		images: src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
+		images: src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest}"
 	},
 	clean: "./" + project_name + "/"
 };

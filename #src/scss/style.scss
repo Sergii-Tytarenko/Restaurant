@@ -100,9 +100,9 @@ body.lock{
 	@media (max-width: 767px) {
 		position: fixed;
 		padding: 5px 0;
-	}
-	&._scroll {
-		top: -100px;
+		&._scroll {
+			top: -100px;
+		}
 	}
 	// .header__container
 	&__container {
